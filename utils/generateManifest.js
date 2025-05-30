@@ -2,10 +2,13 @@ module.exports = function generateManifest(appName, appColor, appLogo, siteUrl) 
     return {
         name: appName,
         short_name: appName,
-        start_url: siteUrl,
+        start_url: "/",           // بداية التطبيق، ممكن تغييره حسب موقعك
+        scope: "/",               // نطاق التطبيق داخل الموقع
         display: "standalone",
         background_color: appColor,
         theme_color: appColor,
+        orientation: "portrait",
+        description: `تطبيق ${appName} من موقعنا`,
         icons: [
             {
                 src: appLogo,
