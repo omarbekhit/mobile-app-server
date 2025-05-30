@@ -25,7 +25,7 @@ exports.handleAppCreation = async (req, res) => {
     res.json({
         success: true,
         message: 'تم إنشاء التطبيق بنجاح',
-        appUrl: `${process.env.SERVER_URL}/public/apps/${siteSlug}/manifest.json`
+        appUrl: `${process.env.SERVER_URL}public/apps/${siteSlug}/manifest.json`
     });
 };
 
