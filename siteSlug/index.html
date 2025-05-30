@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>تطبيقك - مثال</title>
+  
+  <!-- ربط ملف manifest -->
+  <link rel="manifest" href="manifest.json" />
+
+  <!-- ألوان و theme -->
+  <meta name="theme-color" content="#317EFB" />
+
+</head>
+<body>
+  <h1>مرحباً في تطبيقك</h1>
+  <p>هذا التطبيق تم إنشاؤه تلقائياً بواسطة النظام.</p>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('Service Worker Registered'))
+        .catch(err => console.error('Service Worker registration failed:', err));
+    }
+  </script>
+</body>
+</html>
